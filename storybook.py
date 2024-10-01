@@ -4,7 +4,7 @@ from openai import OpenAI
 
 
 my_secret = st.secrets['OPENAI_API_KEY']
-# Initialize the OpenAI API client
+#Initialize the OpenAI API client
 #my_secret = os.environ['OPENAI_API_KEY']
 client = OpenAI(api_key = my_secret)
 
