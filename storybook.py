@@ -3,7 +3,8 @@ import streamlit as st
 from openai import OpenAI
 
 
-my_secret = os.environ['OPENAI_API_KEY']
+my_secret = st.secrets['OPENAI_API_KEY']
+#my_secret = os.environ['OPENAI_API_KEY']
 client = OpenAI(api_key = my_secret)
 
 def story_gen(prompt):
@@ -66,6 +67,7 @@ def storybook(prompt):
   story = story_gen(prompt)
   cover = cover_gen(story)
   image = image_gen(cover)
+
 
 
   st.write(image)
